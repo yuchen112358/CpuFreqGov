@@ -33,7 +33,7 @@ struct cpu_load
 static DEFINE_PER_CPU(struct cpu_load, cpuload);
 
 void update_cpu_metric(int cpu, u64 now, u64 delta_idle, u64 delta_time,
-		       struct cpufreq_policy *policy)
+                       struct cpufreq_policy *policy)
 {
 	struct cpu_load *pcpuload = &per_cpu(cpuload, cpu);
 	unsigned int load;
@@ -54,6 +54,17 @@ void update_cpu_metric(int cpu, u64 now, u64 delta_idle, u64 delta_time,
 #ifdef CONFIG_CPU_THERMAL_IPA_DEBUG
 	trace_printk("cpu_load: cpu: %d freq: %u load: %u\n", cpu, policy->cur, load);
 #endif
+}
+
+void one_cpu_load_metric_get(unsigned int *load, unsigned int *freq, int cpu)
+{
+	unsigned int _load = 0, _freq = 0;
+	struct cpu_load *pcpuload = &per_cpu(cpuload, cpu);
+	_load = pcpuload->load;
+	_freq = pcpuload->frequency;
+
+	*load = _load;
+	*freq = _freq;
 }
 
 void cpu_load_metric_get(int *load, int *freq)

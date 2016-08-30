@@ -1,0 +1,63 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = arm-eabi-gcc$/;"	m
+DEBUG	my_governor.c	9;"	d	file:
+DEFAULT_MIN_SAMPLE_TIME	my_governor.c	86;"	d	file:
+DEFAULT_TIMER_RATE	my_governor.c	91;"	d	file:
+KDIR	Makefile	/^KDIR := \/work\/Odroid\/AndroidSRC\/kernel\/linux$/;"	m
+PWD	Makefile	/^PWD := $(shell pwd)$/;"	m
+TASK_NAME_LEN	my_governor.c	94;"	d	file:
+_DRIVERS_CPU_LOAD_METRIC_H	cpu_load_metric.h	19;"	d
+__this_module	research.mod.c	/^struct module __this_module$/;"	v	typeref:struct:module
+__used	research.mod.c	/^__used$/;"	v	file:
+cluster_stats	cpu_load_metric.h	/^struct cluster_stats$/;"	s
+cpu_load	cpu_load_metric.c	/^struct cpu_load$/;"	s	file:
+cpu_load_metric_get	cpu_load_metric.c	/^void cpu_load_metric_get(int *load, int *freq)$/;"	f
+cpu_timer	my_governor.c	/^	struct timer_list cpu_timer; \/\/cpu定时器$/;"	m	struct:cpufreq_research_cpuinfo	typeref:struct:cpufreq_research_cpuinfo::timer_list	file:
+cpufreq_gov_research	my_governor.c	/^static struct cpufreq_governor cpufreq_gov_research = {$/;"	v	typeref:struct:cpufreq_governor	file:
+cpufreq_gov_research_exit	my_governor.c	/^module_exit(cpufreq_gov_research_exit);$/;"	v
+cpufreq_gov_research_exit	my_governor.c	/^static void __exit cpufreq_gov_research_exit(void)$/;"	f	file:
+cpufreq_gov_research_init	my_governor.c	/^module_init(cpufreq_gov_research_init);$/;"	v
+cpufreq_gov_research_init	my_governor.c	/^static int __init cpufreq_gov_research_init(void)$/;"	f	file:
+cpufreq_governor_research	my_governor.c	/^static int cpufreq_governor_research(struct cpufreq_policy *policy,$/;"	f	file:
+cpufreq_research_cpuinfo	my_governor.c	/^struct cpufreq_research_cpuinfo {$/;"	s	file:
+cpufreq_research_speedchange_task	my_governor.c	/^static int cpufreq_research_speedchange_task(void *data)$/;"	f	file:
+cpufreq_research_timer	my_governor.c	/^static void cpufreq_research_timer(unsigned long data)$/;"	f	file:
+cpufreq_research_timer_start	my_governor.c	/^static void cpufreq_research_timer_start($/;"	f	file:
+cpufreq_research_tunables	my_governor.c	/^struct cpufreq_research_tunables {$/;"	s	file:
+cputime_speedadj	my_governor.c	/^	u64 cputime_speedadj;\/\/记录从定时开始到当前（可认为是定时结束时）的激活时间与当前频率值的乘积值$/;"	m	struct:cpufreq_research_cpuinfo	file:
+cputime_speedadj_timestamp	my_governor.c	/^	u64 cputime_speedadj_timestamp;\/\/记录定时器函数启动或重启时调用get_cpu_idle_time函数的时间戳$/;"	m	struct:cpufreq_research_cpuinfo	file:
+enable_sem	my_governor.c	/^	struct rw_semaphore enable_sem;\/\/enable_sem write semaphore to avoid any timer race.$/;"	m	struct:cpufreq_research_cpuinfo	typeref:struct:cpufreq_research_cpuinfo::rw_semaphore	file:
+freq	cpu_load_metric.h	/^	int freq;$/;"	m	struct:cluster_stats
+freq_table	my_governor.c	/^	struct cpufreq_frequency_table *freq_table;\/\/记录频率表$/;"	m	struct:cpufreq_research_cpuinfo	typeref:struct:cpufreq_research_cpuinfo::cpufreq_frequency_table	file:
+frequency	cpu_load_metric.c	/^	unsigned int frequency;$/;"	m	struct:cpu_load	file:
+get_cluster_stat	cpu_load_metric.c	/^static void get_cluster_stat(struct cluster_stats *cl)$/;"	f	file:
+get_cluster_stats	cpu_load_metric.c	/^void get_cluster_stats(struct cluster_stats *clstats)$/;"	f
+gov_lock	my_governor.c	/^static struct mutex gov_lock;$/;"	v	typeref:struct:mutex	file:
+governor_enabled	my_governor.c	/^	int governor_enabled;\/\/标志governor是否使能$/;"	m	struct:cpufreq_research_cpuinfo	file:
+last_update	cpu_load_metric.c	/^	u64 last_update;$/;"	m	struct:cpu_load	file:
+load	cpu_load_metric.c	/^	unsigned int load;$/;"	m	struct:cpu_load	file:
+load_lock	my_governor.c	/^	spinlock_t load_lock; \/* 保护接下来定义的四个阈值 *\/$/;"	m	struct:cpufreq_research_cpuinfo	file:
+mask	cpu_load_metric.h	/^	cpumask_var_t mask;$/;"	m	struct:cluster_stats
+min_sample_time	my_governor.c	/^	unsigned long min_sample_time;$/;"	m	struct:cpufreq_research_tunables	file:
+msched	my_governor.c	/^static msched_setscheduler_nocheck  msched;$/;"	v	file:
+msched_setscheduler_nocheck	my_governor.c	/^typedef typeof(sched_setscheduler_nocheck) *msched_setscheduler_nocheck;$/;"	t	file:
+obj-m	Makefile	/^obj-m := research.o$/;"	m
+policy	my_governor.c	/^	struct cpufreq_policy *policy;\/\/一种调频策略的各种限制条件的组合称之为policy$/;"	m	struct:cpufreq_research_cpuinfo	typeref:struct:cpufreq_research_cpuinfo::cpufreq_policy	file:
+policy	my_governor.c	/^	unsigned int *policy;$/;"	m	struct:cpufreq_research_tunables	file:
+pr_fmt	my_governor.c	11;"	d	file:
+research-objs	Makefile	/^research-objs := cpu_load_metric.o my_governor.o$/;"	m
+speedchange_cpumask	my_governor.c	/^static cpumask_t speedchange_cpumask;$/;"	v	file:
+speedchange_cpumask_lock	my_governor.c	/^static spinlock_t speedchange_cpumask_lock;$/;"	v	file:
+speedchange_task	my_governor.c	/^	struct task_struct *speedchange_task;$/;"	m	struct:cpufreq_research_tunables	typeref:struct:cpufreq_research_tunables::task_struct	file:
+target_freq	my_governor.c	/^	unsigned int target_freq;\/\/记录上一次调频的目标频率$/;"	m	struct:cpufreq_research_cpuinfo	file:
+time_in_idle	my_governor.c	/^	u64 time_in_idle; \/\/记录系统启动以后运行的idle的总时间$/;"	m	struct:cpufreq_research_cpuinfo	file:
+time_in_idle_timestamp	my_governor.c	/^	u64 time_in_idle_timestamp;\/\/记录调用get_cpu_idle_time函数的时间戳$/;"	m	struct:cpufreq_research_cpuinfo	file:
+timer_rate	my_governor.c	/^	unsigned long timer_rate;$/;"	m	struct:cpufreq_research_tunables	file:
+update_cpu_metric	cpu_load_metric.c	/^void update_cpu_metric(int cpu, u64 now, u64 delta_idle, u64 delta_time,$/;"	f
+util	cpu_load_metric.h	/^	int util;$/;"	m	struct:cluster_stats
+utils	cpu_load_metric.h	/^	int utils[NR_CPUS];$/;"	m	struct:cluster_stats
