@@ -354,7 +354,7 @@ static void cpufreq_research_timer_start(
 	struct cpufreq_research_cpuinfo *pcpu = &per_cpu(mcpuinfo, cpu);
 	// pr_debug("address of tunables is %p\n",tunables);
 	/*
-	在文件<linux/jiffies.h>中：extern unsigned long volatile jiffies;
+	 在文件<linux/jiffies.h>中：extern unsigned long volatile jiffies;
 	 jiffies是内核中的一个全局变量，用来记录自系统启动一来产生的节拍数。
 	 换言之，jiffies是记录着从电脑开机到现在总共的时钟中断次数。
 	 在 Linux 2.6 中，系统时钟每 1 毫秒中断一次（时钟频率，用 HZ 宏表示，定义为 1000，即每秒中断 1000 次，
