@@ -149,6 +149,12 @@ static ssize_t load_proc_write(struct file *file, const char __user *buffer,
 
 static int load_proc_open(struct inode *inode, struct file *file)
 {
+	 /* 
+	 在open时，使用PDE_DATA(inode)作为私有数据向下传。
+	 其实PDE_DATA(inode) 就是phydev。这个私有数据的保存在
+	 seq_file的private里。在write和show函数中可以直接使用seq->private
+	 来找到私有数据。
+	  */
 	return single_open(file, load_proc_show, PDE_DATA(inode));
 }
 
@@ -244,7 +250,7 @@ static unsigned int choose_freq(struct cpufreq_research_cpuinfo *pcpu,
 	}
 	return freq;
 }
-
+//重新调度定时器
 static void cpufreq_research_timer_resched(
     struct cpufreq_research_cpuinfo *pcpu)
 {
