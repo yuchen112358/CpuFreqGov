@@ -1,1 +1,0 @@
-cmd_/work/Odroid/Research/CpuFreqGov/research.ko := arm-eabi-ld -EL -r  -T /work/Odroid/AndroidSRC/kernel/linux/scripts/module-common.lds --build-id  -o /work/Odroid/Research/CpuFreqGov/research.ko /work/Odroid/Research/CpuFreqGov/research.o /work/Odroid/Research/CpuFreqGov/research.mod.o

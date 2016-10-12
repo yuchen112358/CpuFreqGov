@@ -1,1 +1,0 @@
-cmd_/work/Odroid/Research/CpuFreqGov/research.o := arm-eabi-ld -EL    -r -o /work/Odroid/Research/CpuFreqGov/research.o /work/Odroid/Research/CpuFreqGov/cpu_load_metric.o /work/Odroid/Research/CpuFreqGov/my_governor.o 
